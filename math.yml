@@ -1,5 +1,5 @@
----                                                                              
-- hosts: localhost 
+---
+- hosts: localhost
   vars:
     gaddress: ansible_processor_count
   tasks:

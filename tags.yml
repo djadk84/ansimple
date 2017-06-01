@@ -1,5 +1,5 @@
----                                                                              
-- hosts: localhost 
+---
+- hosts: localhost
   tasks:
     - name: "Asnible special tag: tagged"
       debug: msg="This is tagged"

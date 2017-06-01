@@ -1,18 +1,18 @@
----                                                                              
-- hosts: localhost 
+---
+- hosts: localhost
   vars:
-    great: true 
-    lame: false 
+    great: true
+    lame: false
   tasks:
-    - name: This is great 
+    - name: This is great
       debug: msg="{{ great }}"
       when: great
     - name: This is lame
       debug: msg="{{ lame }}"
       when: lame
-    - name: This is not great 
+    - name: This is not great
       debug: msg="{{ not great }}"
-      when: not great 
+      when: great != true
     - name: This is not lame
       debug: msg="{{ not lame }}"
       when: not lame

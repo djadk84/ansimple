@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  vars:
+  tasks:
+    - name: Getting public ip from ansible
+      debug: msg="{{ ansible_all_ipv4_addresses | ipaddr('public') }}"
+    - name: Getting private ip
+      debug: msg="{{ ansible_all_ipv4_addresses | ipaddr('private') }}"
+    - name: What is my public ip
+      ipify_facts:
+      register: realpublicip
+    - debug: msg="{{ realpublicip }}"

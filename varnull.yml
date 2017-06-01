@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  vars:
+    devnull: |
+    nullvars: null
+    emptyvar:
+  tasks:
+    - debug: msg="{{ devnull }}"
+    - debug: msg="{{ nullvars }}"
+    - debug: msg="{{ emptyvar }}"
+

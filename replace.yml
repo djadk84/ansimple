@@ -1,4 +1,4 @@
----                                                                              
+---
 - hosts: localhost
   vars:
     ipadress: "{{ ansible_default_ipv4.address | ipaddr('private')  }}"
