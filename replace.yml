@@ -1,0 +1,9 @@
+---                                                                              
+- hosts: localhost
+  vars:
+    ipadress: "{{ ansible_default_ipv4.address | ipaddr('private')  }}"
+    oip: "{{ ansible_default_ipv4.address | ipaddr('private')  }}"
+    nip: 192.169.11.250
+  tasks:
+    - debug: msg="This is my ip {{ ipadress }} before"
+    - debug: msg="This is my ip {{ ipadress | replace(oip, nip) }} after"

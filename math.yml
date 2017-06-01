@@ -1,0 +1,13 @@
+---                                                                              
+- hosts: localhost 
+  vars:
+    gaddress: ansible_processor_count
+  tasks:
+    - debug: msg="{{ ansible_processor_count }}"
+    - debug: msg="{{ ansible_processor_count|int * 2 }}"
+    - debug: msg="{{ 4 * 2 }}"
+    - debug: msg="{{ 100 / 2 }}"
+    - debug: msg="{{ 50 / 6 }}"
+    - debug: msg="{{ 14 % 3 }}"
+    - debug: msg="{{ 1 + 30 }}"
+    - debug: msg="{{ 26 - 7 }}"

@@ -1,0 +1,18 @@
+---                                                                              
+- hosts: localhost 
+  tasks:
+    - name: "Asnible special tag: tagged"
+      debug: msg="This is tagged"
+      tags:
+        - tagged
+        - config
+        - update
+    - name: "Asnible special tag: untagged"
+      debug: msg="This is untagged"
+      tags:
+        - untagged
+        - config
+    - name: "Asnible special tag: all"
+      debug: msg="This is all"
+      tags:
+        - all

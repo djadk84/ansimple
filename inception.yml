@@ -1,0 +1,10 @@
+---                                                                              
+- hosts: localhost 
+  vars:
+    imvar: "{{ imanothervar1 }}"
+    imanothervar1: "{{ imanothervar }}"
+    imanothervar: You are dreaming 
+  tasks:
+    - name: Inception with variable 
+      debug: msg="{{ imvar  }}"
+
