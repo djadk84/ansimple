@@ -1,2 +1,2 @@
 # ansimple
-Simple example of ansible tricks that will help you out.
+Simple example of ansible, tricks that will help you out.
