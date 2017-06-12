@@ -1,0 +1,10 @@
+---
+- hosts: remotehost
+  vars:
+    mypassword: devopschangemeplease
+  tasks:
+    - name: Update password
+      user:
+        name: myusername
+        update_password: always
+        password: "{{ mypassword | password_hash('sha512') }}"

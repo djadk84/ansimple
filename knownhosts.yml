@@ -1,0 +1,8 @@
+---                                                                              
+- hosts: remotehost
+  tasks:
+    - name: Edit known_host file
+      known_hosts:
+        name: example.domain.org
+        key: "{{ lookup('file', 'example.domain.file.org') }}"
+        state: present

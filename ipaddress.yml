@@ -1,11 +1,14 @@
 ---
-- hosts: localhost
+- hosts: local 
   vars:
+    lan_ip_addresses: "{{ ansible_all_ipv4_addresses | ipaddr('private') }}"
   tasks:
     - name: Getting public ip from ansible
       debug: msg="{{ ansible_all_ipv4_addresses | ipaddr('public') }}"
-    - name: Getting private ip
+    - name: Array of private ip
       debug: msg="{{ ansible_all_ipv4_addresses | ipaddr('private') }}"
+    - name: first lan ip address 
+      debug: msg="{{ lan_ip_addresses.0 }}"
     - name: What is my public ip
       ipify_facts:
       register: realpublicip

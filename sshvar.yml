@@ -1,0 +1,8 @@
+---
+- hosts: remote
+  tasks:
+    - debug: msg="{{ ansible_ssh_host }}"
+    - debug: msg="{{ ansible_connection }}"
+    - debug: msg="{{ ansible_default_ipv4.address }}"
+    - debug: msg="{{ ansible_env.SSH_CONNECTION }}"
+    - debug: msg="{{ ansible_env.SSH_CONNECTION.split(' ')[2] }}"
